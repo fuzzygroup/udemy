@@ -34,7 +34,7 @@ module Udemy
       json_response = JSON.parse(response.parsed_response)
       response_hash = Hashie::Mash.new(json_response)
 
-      raise Udemy::Error.new(response_hash.status) unless response.code == 200
+      raise Udemy::APIResponseError.new(response_hash.status) unless response.code == 200
 
       return Hashie::Mash.new(response_hash)
     end

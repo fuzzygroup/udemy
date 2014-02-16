@@ -22,6 +22,6 @@ describe Udemy::Client do
   it "creates errors" do
     expect {
       client.get("/non-existant-api-call")
-    }.to raise_error(Udemy::Error)
+    }.to raise_error(Udemy::APIResponseError)
   end
 end

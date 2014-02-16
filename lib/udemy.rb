@@ -1,6 +1,7 @@
 require 'hashie'
 require 'httparty'
 require 'udemy/client'
+require 'udemy/course'
 
 Hash.send :include, Hashie::HashExtensions
 
@@ -11,8 +12,10 @@ module Udemy
     attr_accessor :client_secret
   end
 
+  class Error < StandardError; end
+
   # Base API Error Object
-  class Error < StandardError
+  class APIResponseError < StandardError
     attr_reader :data
 
     def initialize(data)
