@@ -18,4 +18,10 @@ describe Udemy::Client do
   it "has client credientials in headers" do
     client.headers.should eql headers
   end
+
+  it "creates errors" do
+    expect {
+      client.get("/non-existant-api-call")
+    }.to raise_error(Udemy::Error)
+  end
 end
