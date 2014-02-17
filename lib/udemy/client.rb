@@ -16,12 +16,16 @@ module Udemy
       }
     end
 
-    def get(url, query = {})
-      Udemy::Client.get(url, headers: @headers, query: query)
+    def get(url, opts = {})
+      opts = {headers: @headers}.merge(opts)
+
+      Udemy::Client.get(url, opts)
     end
 
-    def post(url, query = {})
-      Udemy::Client.post(url, headers: @headers, query: query)
+    def post(url, opts = {})
+      opts = {headers: @headers}.merge(opts)
+
+      Udemy::Client.post(url, opts)
     end
 
     # Handle Response from HTTParty
