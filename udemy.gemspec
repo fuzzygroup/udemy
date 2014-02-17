@@ -8,10 +8,11 @@ Gem::Specification.new do |s|
   s.name        = "udemy"
   s.version     = Udemy::VERSION
   s.authors     = ["Jonathan Lancar"]
-  s.email       = ["TODO: jonaphin@gmail.com"]
+  s.email       = ["jonaphin@gmail.com"]
   s.homepage    = "http://www.genesx.com"
-  s.summary     = "TODO: Udemy.com API Gem."
-  s.description = "TODO: Udemy.com API Wrapper for Ruby."
+  s.summary     = "Udemy.com API Gem."
+  s.description = "Udemy.com API Wrapper for Ruby."
+  s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
