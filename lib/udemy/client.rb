@@ -7,6 +7,9 @@ module Udemy
     attr_accessor :headers
 
     def initialize
+      raise Error.new("Your API credentials are missing") \
+        if (Udemy.client_key.blank? || Udemy.client_secret.blank?)
+
       @headers = {
         "X-Udemy-Client-Id" => Udemy.client_key,
         "X-Udemy-Client-Secret" => Udemy.client_secret
@@ -31,6 +34,9 @@ module Udemy
     end
 
     def self.handle_response(response)
+      raise Error.new("No response from the server. Make sure the URL is correct.") \
+        if (response.blank? || response.parsed_response.blank?)
+
       json_response = JSON.parse(response.parsed_response)
       response_hash = Hashie::Mash.new(json_response)
 
