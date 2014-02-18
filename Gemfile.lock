@@ -1,10 +1,9 @@
 PATH
   remote: .
   specs:
-    udemy (0.1.0)
+    udemy (0.1.1)
       hashie (~> 2.0.5)
       httparty (~> 0.13.0)
-      rails (~> 4.0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -121,6 +120,7 @@ PLATFORMS
 
 DEPENDENCIES
   debugger
+  rails (>= 3.0)
   rspec-rails
   sqlite3
   udemy!
