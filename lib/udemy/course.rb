@@ -6,8 +6,8 @@ module Udemy
     # @see https://developers.udemy.com/#model-course
     def self.findOne(id)
       raise Udemy::Error.new("ID is required") if id.blank?
-
-      return Client.new.get("/courses/#{id}")
+      return Client.new.get("/api-2.0/courses/?search=docker")
+      #return Client.new.get("/courses/#{id}")
     end
   end
 end
