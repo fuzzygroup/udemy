@@ -18,9 +18,9 @@ Gem::Specification.new do |s|
 
   s.add_dependency "hashie", "~> 2.0.5"
   s.add_dependency "httparty", "~> 0.13.0"
-
-  s.add_development_dependency "rails", ">= 3.0"
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "json", '>= 1.8.3'
+  s.add_development_dependency "rails", ">= 5.0.2"
+  #s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "webmock", "~> 1.17.3"
   s.add_development_dependency "vcr", "~> 2.8.0"
