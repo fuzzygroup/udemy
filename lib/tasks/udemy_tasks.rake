@@ -14,6 +14,8 @@ namespace :udemy do
 
     course = Udemy::Course.findOne(5816)
     
+    courses = Udemy::Courses.search("docker")
+    
     puts course.inspect
     
   end
